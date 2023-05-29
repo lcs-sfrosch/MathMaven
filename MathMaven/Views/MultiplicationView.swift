@@ -1,45 +1,33 @@
-//
-//  MultiplicationView.swift
-//  MathMaven
-//
-//  Created by Russell Gordon on 2023-05-24.
-//
-
 import SwiftUI
 
 struct MultiplicationView: View {
-    var body: some View {
-        VStack {
-            Text("Multiplication")
-            Text(Operation.multiplication.rawValue)
-        
-        .font(Font.custom("SF Pro", size: 64))
-
     
-    @State var firstValue = Int.random(in: 1...144)
-    @State var secondValue = 0  // Will be updated once view loads
     
-    // Holds whatever input was provided by the user
+    
+    @State var firstValue = Int.random(in: 1...12)
+    @State var secondValue = 0
+    
+   
     @State var input = ""
     
-    // Has the user's answer been checked?
+   
     @State var answerChecked = false
     
-    // Was the user's given answer correct?
+  
     @State var answerCorrect = false
     
-    // MARK: Computed properties
+   
 
-    // The correct response
+    
     var correctResponse: Int {
-        return firstValue / secondValue
+        return firstValue * secondValue
     }
     
-    // The user interface
+    
     var body: some View {
         VStack(spacing: 0) {
             
-            
+           
             Group {
                 HStack {
                     Text(Operation.multiplication.rawValue)
@@ -56,18 +44,18 @@ struct MultiplicationView: View {
             }
             .padding(.horizontal)
 
-           
+          
             HStack {
 
                 ZStack {
                     
-                   
+                    
                     if answerCorrect == true {
                         Image(systemName: "checkmark.circle")
                             .foregroundColor(.green)
                     }
                     
-                    
+                  
                     if answerChecked == true && answerCorrect == false {
                         Image(systemName: "x.square")
                             .foregroundColor(.red)
@@ -82,7 +70,7 @@ struct MultiplicationView: View {
             }
             .padding(.horizontal)
 
-            
+          
             if answerChecked == false {
                 
                 CheckAnswerButtonView(input: input,
@@ -92,7 +80,7 @@ struct MultiplicationView: View {
                 
             } else {
                 
-              
+                
                 Button(action: {
                     generateNewQuestion()
                 }, label: {
@@ -104,31 +92,31 @@ struct MultiplicationView: View {
                 
             }
             
+            
             Spacer()
 
         }
         .font(Font.custom("SF Pro", size: 64))
-    
+       
         .task {
-            
-            secondValue = Int.random(in: 1...firstValue)
+           
+            secondValue = Int.random(in: 1...12)
         }
     }
     
-    
+    // Generate a new question
     func generateNewQuestion() {
         
-      
-        firstValue = Int.random(in: 1...144)
-        secondValue = Int.random(in: 1...firstValue)
+        // Generate a new question
+        firstValue = Int.random(in: 1...12)
+        secondValue = Int.random(in: 1...12)
 
-        
+        // Reset properties that track what's happening with the current question
         answerChecked = false
         answerCorrect = false
         
-       
+        // Reset the input field
         input = ""
-
     }
 }
 
@@ -137,3 +125,4 @@ struct MultiplicationView_Previews: PreviewProvider {
         MultiplicationView()
     }
 }
+
