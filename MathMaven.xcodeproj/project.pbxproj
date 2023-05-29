@@ -19,6 +19,7 @@
 		9973B4FC2A243EC00005176F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9973B4FB2A243EC00005176F /* Lottie */; };
 		9973B4FE2A2440080005176F /* 91878-bouncy-fail.json in Resources */ = {isa = PBXBuildFile; fileRef = 9973B4FD2A2440070005176F /* 91878-bouncy-fail.json */; };
 		9973B5002A2440110005176F /* 119208-right.json in Resources */ = {isa = PBXBuildFile; fileRef = 9973B4FF2A2440110005176F /* 119208-right.json */; };
+		99C0FDA62A24411800CF7EAF /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C0FDA52A24411800CF7EAF /* LottieView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		814859152A1E360D00A7315E /* CheckAnswerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAnswerButtonView.swift; sourceTree = "<group>"; };
 		9973B4FD2A2440070005176F /* 91878-bouncy-fail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "91878-bouncy-fail.json"; sourceTree = "<group>"; };
 		9973B4FF2A2440110005176F /* 119208-right.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "119208-right.json"; sourceTree = "<group>"; };
+		99C0FDA52A24411800CF7EAF /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				9973B4FD2A2440070005176F /* 91878-bouncy-fail.json */,
 				9973B4FF2A2440110005176F /* 119208-right.json */,
 				814859112A1E2A5900A7315E /* Operation.swift */,
+				99C0FDA52A24411800CF7EAF /* LottieView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				8148590F2A1E298300A7315E /* DivisionView.swift in Sources */,
 				814859122A1E2A5900A7315E /* Operation.swift in Sources */,
 				814859162A1E360D00A7315E /* CheckAnswerButtonView.swift in Sources */,
+				99C0FDA62A24411800CF7EAF /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

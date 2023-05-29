@@ -51,14 +51,13 @@ struct MultiplicationView: View {
                     
                     
                     if answerCorrect == true {
-                        Image(systemName: "checkmark.circle")
-                            .foregroundColor(.green)
+                        LottieView(animationNamed: "119208-right")
+                
                     }
                     
                   
                     if answerChecked == true && answerCorrect == false {
-                        Image(systemName: "x.square")
-                            .foregroundColor(.red)
+                        LottieView(animationNamed: "91878-bouncy-fail")
                     }
                 }
                 
