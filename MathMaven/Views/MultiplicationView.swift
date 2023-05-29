@@ -104,18 +104,18 @@ struct MultiplicationView: View {
         }
     }
     
-    // Generate a new question
+   
     func generateNewQuestion() {
         
         // Generate a new question
         firstValue = Int.random(in: 1...12)
         secondValue = Int.random(in: 1...12)
 
-        // Reset properties that track what's happening with the current question
+        
         answerChecked = false
         answerCorrect = false
         
-        // Reset the input field
+       
         input = ""
     }
 }

@@ -10,6 +10,6 @@ import Foundation
 enum Operation: String {
     case addition = "+"
     case subtraction = "–"
-    case multiplication = "✕"
-    case division = "÷"
+    case multiplication = "*"
+    case division = "/"
 }
